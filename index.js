@@ -26,6 +26,7 @@ app.post('/subir', upload.single('file'), (req, res) => {
 
 app.post('/subirlista', upload.array('files', 3), (req, res) => {
     console.log(`${req.hostname}`);
+    
     return res.send(req.files);
 });
 
